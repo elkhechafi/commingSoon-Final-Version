@@ -1,0 +1,902 @@
+@font-face {
+  font-family: 'HalbfetteSecession';
+    src:  url('HalbfetteSecession.ttf.woff') format('woff'),
+    url('HalbfetteSecession.ttf.svg#HalbfetteSecession') format('svg'),
+    url('HalbfetteSecession.ttf.eot'),
+    url('HalbfetteSecession.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    max-width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'HalbfetteSecession';
+    height: max-content;
+    position: relative;
+    background-image: url('./../img/Background.png');  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    overflow-x: hidden;
+}
+
+.smscreen{
+  display: none;
+}
+
+#preLoading{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    opacity: 1;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    transition: 1s ease-in-out !important;
+    img{
+        padding: 0%;
+        width: 100vw;
+        height: inherit;
+    }
+}
+
+#homeSection{
+    height: max-content;
+    width: 100vw;
+    // background-image: url('./../img/Background.png');
+    // background-size: 100%;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    #moon{
+        position: absolute;
+        height: 45vh;
+        width: auto;
+        top: -10%;
+        left: 5%;
+        transition: 2s ease-in-out;
+    }
+    #tree{
+        position: fixed;
+        top: 25%;
+        right: -20%;
+        transition: 2s ease-in-out;
+    }
+    #house{
+      position: fixed;
+      top: 36%;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: 69%;
+      transition: 2s ease-in-out;
+    }
+
+    .sec{
+        position: relative;
+        background-color: #080c2c00;
+        min-height: max-content;
+        background-position: cover;
+        background-size: 100%;
+        z-index: 100;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: max-content;
+        width: 90%;
+        margin: 100vh 5% 5%;
+        padding-bottom: 15vh;
+        color: aliceblue;
+        h2{
+            font-family: 'HalbfetteSecession';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 106.71px;
+            line-height: 108px;
+            text-align: center;
+            
+            padding-bottom: 5vh;
+            color: #FFFFFF;
+            
+            text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+        }
+
+        p{
+            width: 70%;
+            font-family: 'Anek Telugu';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15.53px;
+            line-height: 23px;
+            text-align: center;
+        
+            color: #FFFFFF;
+        
+            text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+        }
+
+        .container {
+            padding-top: 4vh;
+            color: #ffffff;
+            margin: 0 auto;
+            text-align: center;
+            width: 70%;
+            font-family: 'HalbfetteSecession';
+            #headline {
+                font-family: 'Anek Telugu';
+                font-weight: normal;
+                letter-spacing: .125rem;
+                font-size: 15.53px;
+                padding-bottom: 4vh;
+              }
+              
+              li {
+                display: inline-block;
+                font-size: 1em;
+                list-style-type: none;
+                padding: 0% 1em;
+                text-transform: uppercase;
+                line-height: 1;
+              }
+              
+              li span {
+                display: block;
+                font-size: 4.5rem;
+              }
+              
+              .emoji {
+                display: none;
+                padding: 1rem;
+              }
+              
+              .emoji span {
+                font-size: 4rem;
+                padding: 0 .5rem;
+              }
+              
+              @media all and (max-width: 768px) {
+                h1 {
+                  font-size: calc(1.5rem * var(--smaller));
+                }
+                
+                li {
+                  font-size: calc(1.125rem * var(--smaller));
+                }
+                
+                li span {
+                  font-size: calc(3.375rem * var(--smaller));
+                }
+              }
+        
+        }
+    }
+    .land{
+        width: 100%;
+        height: 45vh;
+        max-height: 60vh!important;
+        max-width: 135%!important;
+        position: fixed;
+        bottom: 0%;
+        left: 0%;
+        z-index: 999;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        // transition: 2s ease-in-out;
+        #leftLand{
+          position: absolute;
+          bottom: 0%;
+          left: 0%;
+          z-index: 999;
+          #leftTree{
+            left: 0%;
+          }
+        }
+        #rightLand{
+          position: absolute;
+          right: 0%;
+          bottom: 0;
+        }
+    }
+    .landSm{
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 1536px) {
+  .smscreen{
+    display: none;
+  }
+
+  .bigscreen{
+    height: 100vh;
+  }
+  #homeSection{
+
+    #moon{
+        position: fixed;
+        height: 50vh;
+        width: auto;
+        top: -10%;
+        left: 5%;
+    }
+    #tree{
+        position: fixed;
+        top: 10%;
+        right: -20%;
+    }
+    #house{
+      position: fixed;
+      top: 36%;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: 67%;
+      transition: 2s ease-in-out;
+    }
+
+    .sec{
+        position: relative;
+        background-color: #080c2c00;
+        height: max-content;
+        min-height: max-content;
+        background-position: cover;
+        background-size: 100%;
+        z-index: 100;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        // flex-direction: column;
+        width: 100vw;
+        margin: 75vh 0% 3vh;
+        padding: 15% 10%  15vh;
+        color: aliceblue;
+        h2{
+            font-family: 'HalbfetteSecession';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 106.71px;
+            line-height: 108px;
+            text-align: center;
+            
+            padding-bottom: 10vh;
+            color: #FFFFFF;
+            
+            text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+        }
+
+        p{
+            width: 70%;
+            font-family: 'Anek Telugu';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15.53px;
+            line-height: 23px;
+            text-align: center;
+        
+            color: #FFFFFF;
+        
+            text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+        }
+
+        .container {
+            padding-top: 5vh;
+            margin: 0 auto;
+            text-align: center;
+            width: 70%;
+            font-family: 'Anek Telugu';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15.53px;
+            // line-height: 23px;
+             #headline {
+                font-family: 'Anek Telugu';
+                font-weight: normal;
+                letter-spacing: .125rem;
+                font-size: 0.8rem;
+            }
+              
+              li {
+                display: inline-block;
+                font-size: 1em;
+                list-style-type: none;
+                padding: 0% 1em;
+                text-transform: uppercase;
+                line-height: 1;
+              }
+              
+              li span {
+                display: block;
+                font-size: 4.5rem;
+              }
+              
+              .emoji {
+                display: none;
+                padding: 1rem;
+              }
+              
+              .emoji span {
+                font-size: 4rem;
+                padding: 0 .5rem;
+              }
+              
+              @media all and (max-width: 768px) {
+                h1 {
+                  font-size: calc(1.5rem * var(--smaller));
+                }
+                
+                li {
+                  font-size: calc(1.125rem * var(--smaller));
+                }
+                
+                li span {
+                  font-size: calc(3.375rem * var(--smaller));
+                }
+              }
+        
+        }
+    }
+
+    .land{
+        width: 100%;
+        height: 35vh;
+        max-height: 60vh!important;
+        max-width: 135%!important;
+        position: fixed;
+        bottom: 0%;
+        left: 0%;
+        z-index: 999;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        // transition: 2s ease-in-out;
+        #leftLand{
+          position: absolute;
+          bottom: 0%;
+          left: 0%;
+          #leftTree{
+            left: 0%;
+          }
+        }
+        #rightLand{
+          z-index: 999;
+          position: absolute;
+          right: 0%;
+          bottom: 0;
+        }
+    }
+
+    .landSm{
+      display: none;
+    }
+}
+
+}
+@media only screen and (max-width: 1200px) {
+  .smscreen{
+  display: none;
+}
+.bigscreen{
+  height: 100vh;
+}
+  #homeSection{
+
+    #moon{
+        position: absolute;
+        height: 35vh;
+        width: auto;
+        top: -10%;
+        left: 5%;
+    }
+    #tree{
+        position: fixed;
+        top: 21%;
+        right: -20%;
+    }
+    #house{
+      position: fixed;
+      top: 36%;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+      transition: 2s ease-in-out;
+    }
+
+    .sec{
+        position: relative;
+        background-color: #080c2c00;
+        height: max-content!important;
+        min-height: max-content;
+        background-position: cover;
+        background-size: 100%;
+        z-index: 100;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        // flex-direction: column;
+        width: 100vw;
+        margin-top: 75vh;
+        padding: 15% 0% ;
+        color: aliceblue;
+        h2{
+            font-family: 'HalbfetteSecession';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 106.71px;
+            line-height: 108px;
+            text-align: center;
+            
+            padding-bottom: 10vh;
+            color: #FFFFFF;
+            
+            text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+        }
+
+        p{
+            width: 70%;
+            font-family: 'Anek Telugu';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15.53px;
+            line-height: 23px;
+            text-align: center;
+        
+            color: #FFFFFF;
+        
+            text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+        }
+
+        .container {
+            padding-top: 5vh;
+            color: #e7e7e7;
+            margin: 0 auto;
+            text-align: center;
+            width: 70%;
+            #headline {
+                font-family: 'Anek Telugu';
+                font-weight: normal;
+                letter-spacing: .125rem;
+                font-size: 0.8rem;
+              }
+              
+              li {
+                display: inline-block;
+                font-size: 1em;
+                list-style-type: none;
+                padding: 0% 1em;
+                text-transform: uppercase;
+                line-height: 1;
+              }
+              
+              li span {
+                display: block;
+                font-size: 4.5rem;
+              }
+              
+              .emoji {
+                display: none;
+                padding: 1rem;
+              }
+              
+              .emoji span {
+                font-size: 4rem;
+                padding: 0 .5rem;
+              }
+              
+              @media all and (max-width: 768px) {
+                h1 {
+                  font-size: calc(1.5rem * var(--smaller));
+                }
+                
+                li {
+                  font-size: calc(1.125rem * var(--smaller));
+                }
+                
+                li span {
+                  font-size: calc(3.375rem * var(--smaller));
+                }
+              }
+        
+        }
+    }
+
+    .land{
+        width: 100%;
+        height: 35vh;
+        max-height: 60vh!important;
+        max-width: 135%!important;
+        position: fixed;
+        bottom: 0%;
+        left: 0%;
+        z-index: 999;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        // transition: 2s ease-in-out;
+        #leftLand{
+          position: absolute;
+          bottom: 0%;
+          left: 0%;
+          #leftTree{
+            left: 0%;
+          }
+        }
+        #rightLand{
+          z-index: 999;
+          position: absolute;
+          right: 0%;
+          bottom: 0;
+        }
+    }
+    .landSm{
+      display: none;
+    }
+}
+
+}
+@media only screen and (max-width: 600px) {
+  
+  .bigscreen{
+    display: none;
+  #homeSection{
+
+    #moon{
+        position: absolute;
+        height: 35vh;
+        width: auto;
+        top: -10%;
+        left: 5%;
+    }
+    #tree{
+        position: fixed;
+        top: 23%;
+        right: -20%;
+        width: auto;
+        height: auto;
+        z-index: 5;
+    }
+    #house{
+      z-index: 6;
+      position: fixed;
+      top: 35vh;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+      transition: 2s ease-in-out;
+    }
+
+    .sec{
+        position: relative;
+        background-color: #080c2c00;
+        height: 100vh!important;
+        min-height: max-content;
+        background-position: cover;
+        background-size: 100%;
+        z-index: 100;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        // flex-direction: column;
+        width: 100vw;
+        // margin-top: 75vh;
+        padding-bottom: 15vh;
+        color: aliceblue;
+        h2{
+            font-family: 'HalbfetteSecession';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 106.71px;
+            line-height: 108px;
+            text-align: center;
+            
+            padding-bottom: 10vh;
+            color: #FFFFFF;
+            
+            text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+        }
+
+        p{
+            width: 70%;
+            font-family: 'Anek Telugu';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15.53px;
+            line-height: 23px;
+            text-align: center;
+        
+            color: #FFFFFF;
+        
+            text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+        }
+
+        .container {
+            padding-top: 5vh;
+            color: #e7e7e7;
+            margin: 0 auto;
+            text-align: center;
+            width: 70%;
+            #headline {
+                font-family: 'Anek Telugu';
+                font-weight: normal;
+                letter-spacing: .125rem;
+                font-size: 0.8rem;
+              }
+              
+              li {
+                display: inline-block;
+                font-size: 1em;
+                list-style-type: none;
+                padding: 0% 1em;
+                text-transform: uppercase;
+                line-height: 1;
+              }
+              
+              li span {
+                display: block;
+                font-size: 4.5rem;
+              }
+              
+              .emoji {
+                display: none;
+                padding: 1rem;
+              }
+              
+              .emoji span {
+                font-size: 4rem;
+                padding: 0 .5rem;
+              }
+              
+              @media all and (max-width: 768px) {
+                h1 {
+                  font-size: calc(1.5rem * var(--smaller));
+                }
+                
+                li {
+                  font-size: calc(1.125rem * var(--smaller));
+                }
+                
+                li span {
+                  font-size: calc(3.375rem * var(--smaller));
+                }
+              }
+        
+        }
+    }
+
+    .land{
+        width: 100%;
+        height: 35vh;
+        max-height: 60vh!important;
+        max-width: 135%!important;
+        position: fixed;
+        bottom: 0%;
+        left: 0%;
+        z-index: 999;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        // transition: 2s ease-in-out;
+        #leftLand{
+          position: absolute;
+          bottom: 0%;
+          left: 0%;
+          #leftTree{
+            left: 0%;
+          }
+        }
+        #rightLand{
+          z-index: 999;
+          position: absolute;
+          right: 0%;
+          bottom: 0;
+        }
+    }
+
+    .landlg{
+      display: none;
+    }
+    .land .sm{
+      display: inline;
+    }
+}
+}
+
+body{
+  margin: 0%;
+  padding: 0%;
+  max-width: 100vw;
+  width: 100%;
+  min-height: max-content;
+  font-family: "HalbfetteSecession";
+  height: max-content;
+  position: relative;
+  background-size: 100%;
+  overflow-x: hidden;
+  background-image: none;
+}
+  .smscreen{
+    display: inline-flex;
+    flex-wrap: wrap;
+    background-image: none;
+    position: relative;
+    height: max-content;
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url('./../img/smallVersion/mainBg.png');
+    background-position: center;
+    background-size: cover;
+    #preLoadingSm{
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      opacity: 1;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      transition: 2s ease-in-out !important;
+      img{
+          padding: 0%;
+          width: 100vw;
+          height: 100vh;
+      }
+    }
+
+    #moonSm{
+      height: 247px;
+      width: auto;
+      position: fixed;
+      top: 0vh;
+      left: 0%;
+    }
+
+    #houseSm{
+      position: absolute;
+      top: 50vh;
+      height: 362px;
+      width: 100%;
+      // transition: 0.5s ease-in-out  ;
+    }
+    #SmbottomLand{
+      position: fixed;
+      transition: 0.7s ease-in-out;
+      bottom: 0%;
+      left: 0%;
+      width: 100%;
+      z-index: 999;
+      opacity: 1;
+    }
+
+    .sec{
+      position: relative;
+      background-color: #080c2c00;
+      height: max-content;
+      min-height: max-content;
+      background-position: cover;
+      background-size: 100%;
+      z-index: 99;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100vw;
+      margin-top: 75vh;
+      padding: 25vh 0%;
+      color: aliceblue;
+      h2{
+          font-family: 'HalbfetteSecession';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 2rem;
+          line-height: 108px;
+          text-align: center;
+          width: 100%;
+          color: #FFFFFF;
+          
+          text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+      }
+
+      p{
+          width: 70%;
+          font-family: 'Anek Telugu';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15.53px;
+          line-height: 1rem;
+          text-align: left;
+      
+          color: #FFFFFF;
+      
+          text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+      }
+
+      .container {
+          padding-top: 2vh;
+          color: #e7e7e7;
+          margin: 0 auto;
+          text-align: center;
+          width: 100%;
+          display: inherit;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          #headline {
+            width: 70%;
+            font-family: "Anek Telugu";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15.53px;
+            line-height: 1rem;
+            text-align: center;
+            color: #FFFFFF;
+            text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+            }
+            
+            li {
+              display: inline-block;
+              font-family: 'Anek Telugu';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 7.56px;
+              line-height: 11px;
+              text-align: center;
+
+              color: #FFFFFF;
+              list-style-type: none;
+              padding: 0% 1em;
+              text-transform: uppercase;
+              line-height: 1;
+            }
+            
+            li span {
+              display: block;
+              font-family: 'Halbfette Secession';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 30.8033px;
+              line-height: 62px;
+              text-align: center;
+            }
+            
+            .emoji {
+              display: none;
+              padding: 1rem;
+            }
+            
+            .emoji span {
+              font-size: 4rem;
+              padding: 0 .5rem;
+            }
+          
+      
+      }
+  }
+
+    #SmTopLand{
+      position: fixed;
+      transition: 0.7s ease-in-out;
+      bottom: 0%;
+      left: 0%;
+      width: 100%;
+      z-index: 999;
+      opacity: 0;
+    }
+  }
+}

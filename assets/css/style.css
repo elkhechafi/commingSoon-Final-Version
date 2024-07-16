@@ -1,0 +1,821 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;200;300;400;500;600;700;800&display=swap");
+@font-face {
+  font-family: "HalbfetteSecession";
+  src: url("HalbfetteSecession.ttf.woff") format("woff"), url("HalbfetteSecession.ttf.svg#HalbfetteSecession") format("svg"), url("HalbfetteSecession.ttf.eot"), url("HalbfetteSecession.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  max-width: 100vw;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "HalbfetteSecession";
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+  background-image: url("./../img/Background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  overflow-x: hidden;
+}
+
+.smscreen {
+  display: none;
+}
+
+#preLoading {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  opacity: 1;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  transition: 1s ease-in-out !important;
+}
+#preLoading img {
+  padding: 0%;
+  width: 100vw;
+  height: inherit;
+}
+
+#homeSection {
+  height: -moz-max-content;
+  height: max-content;
+  width: 100vw;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#homeSection #moon {
+  position: absolute;
+  height: 45vh;
+  width: auto;
+  top: -10%;
+  left: 5%;
+  transition: 2s ease-in-out;
+}
+#homeSection #tree {
+  position: fixed;
+  top: 25%;
+  right: -20%;
+  transition: 2s ease-in-out;
+}
+#homeSection #house {
+  position: fixed;
+  top: 36%;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 69%;
+  transition: 2s ease-in-out;
+}
+#homeSection .sec {
+  position: relative;
+  background-color: rgba(8, 12, 44, 0);
+  min-height: -moz-max-content;
+  min-height: max-content;
+  background-position: cover;
+  background-size: 100%;
+  z-index: 100;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: -moz-max-content;
+  height: max-content;
+  width: 90%;
+  margin: 100vh 5% 5%;
+  padding-bottom: 15vh;
+  color: aliceblue;
+}
+#homeSection .sec h2 {
+  font-family: "HalbfetteSecession";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 106.71px;
+  line-height: 108px;
+  text-align: center;
+  padding-bottom: 5vh;
+  color: #FFFFFF;
+  text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+}
+#homeSection .sec p {
+  width: 70%;
+  font-family: "Anek Telugu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.53px;
+  line-height: 23px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+}
+#homeSection .sec .container {
+  padding-top: 4vh;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  width: 70%;
+  font-family: "HalbfetteSecession";
+}
+#homeSection .sec .container #headline {
+  font-family: "Anek Telugu";
+  font-weight: normal;
+  letter-spacing: 0.125rem;
+  font-size: 15.53px;
+  padding-bottom: 4vh;
+}
+#homeSection .sec .container li {
+  display: inline-block;
+  font-size: 1em;
+  list-style-type: none;
+  padding: 0% 1em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+#homeSection .sec .container li span {
+  display: block;
+  font-size: 4.5rem;
+}
+#homeSection .sec .container .emoji {
+  display: none;
+  padding: 1rem;
+}
+#homeSection .sec .container .emoji span {
+  font-size: 4rem;
+  padding: 0 0.5rem;
+}
+@media all and (max-width: 768px) {
+  #homeSection .sec .container h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  #homeSection .sec .container li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  #homeSection .sec .container li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+#homeSection .land {
+  width: 100%;
+  height: 45vh;
+  max-height: 60vh !important;
+  max-width: 135% !important;
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  z-index: 999;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+#homeSection .land #leftLand {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  z-index: 999;
+}
+#homeSection .land #leftLand #leftTree {
+  left: 0%;
+}
+#homeSection .land #rightLand {
+  position: absolute;
+  right: 0%;
+  bottom: 0;
+}
+#homeSection .landSm {
+  display: none;
+}
+
+@media only screen and (max-width: 1536px) {
+  .smscreen {
+    display: none;
+  }
+  .bigscreen {
+    height: 100vh;
+  }
+  #homeSection #moon {
+    position: fixed;
+    height: 50vh;
+    width: auto;
+    top: -10%;
+    left: 5%;
+  }
+  #homeSection #tree {
+    position: fixed;
+    top: 10%;
+    right: -20%;
+  }
+  #homeSection #house {
+    position: fixed;
+    top: 36%;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 67%;
+    transition: 2s ease-in-out;
+  }
+  #homeSection .sec {
+    position: relative;
+    background-color: rgba(8, 12, 44, 0);
+    height: -moz-max-content;
+    height: max-content;
+    min-height: -moz-max-content;
+    min-height: max-content;
+    background-position: cover;
+    background-size: 100%;
+    z-index: 100;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 75vh 0% 3vh;
+    padding: 15% 10% 15vh;
+    color: aliceblue;
+  }
+  #homeSection .sec h2 {
+    font-family: "HalbfetteSecession";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 106.71px;
+    line-height: 108px;
+    text-align: center;
+    padding-bottom: 10vh;
+    color: #FFFFFF;
+    text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+  }
+  #homeSection .sec p {
+    width: 70%;
+    font-family: "Anek Telugu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.53px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+  }
+  #homeSection .sec .container {
+    padding-top: 5vh;
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+    font-family: "Anek Telugu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.53px;
+  }
+  #homeSection .sec .container #headline {
+    font-family: "Anek Telugu";
+    font-weight: normal;
+    letter-spacing: 0.125rem;
+    font-size: 0.8rem;
+  }
+  #homeSection .sec .container li {
+    display: inline-block;
+    font-size: 1em;
+    list-style-type: none;
+    padding: 0% 1em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  #homeSection .sec .container li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+  #homeSection .sec .container .emoji {
+    display: none;
+    padding: 1rem;
+  }
+  #homeSection .sec .container .emoji span {
+    font-size: 4rem;
+    padding: 0 0.5rem;
+  }
+}
+@media only screen and (max-width: 1536px) and (max-width: 768px) {
+  #homeSection .sec .container h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  #homeSection .sec .container li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  #homeSection .sec .container li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+@media only screen and (max-width: 1536px) {
+  #homeSection .land {
+    width: 100%;
+    height: 35vh;
+    max-height: 60vh !important;
+    max-width: 135% !important;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    z-index: 999;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homeSection .land #leftLand {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+  }
+  #homeSection .land #leftLand #leftTree {
+    left: 0%;
+  }
+  #homeSection .land #rightLand {
+    z-index: 999;
+    position: absolute;
+    right: 0%;
+    bottom: 0;
+  }
+}
+@media only screen and (max-width: 1536px) {
+  #homeSection .landSm {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .smscreen {
+    display: none;
+  }
+  .bigscreen {
+    height: 100vh;
+  }
+  #homeSection #moon {
+    position: absolute;
+    height: 35vh;
+    width: auto;
+    top: -10%;
+    left: 5%;
+  }
+  #homeSection #tree {
+    position: fixed;
+    top: 21%;
+    right: -20%;
+  }
+  #homeSection #house {
+    position: fixed;
+    top: 36%;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    transition: 2s ease-in-out;
+  }
+  #homeSection .sec {
+    position: relative;
+    background-color: rgba(8, 12, 44, 0);
+    height: -moz-max-content !important;
+    height: max-content !important;
+    min-height: -moz-max-content;
+    min-height: max-content;
+    background-position: cover;
+    background-size: 100%;
+    z-index: 100;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: 75vh;
+    padding: 15% 0%;
+    color: aliceblue;
+  }
+  #homeSection .sec h2 {
+    font-family: "HalbfetteSecession";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 106.71px;
+    line-height: 108px;
+    text-align: center;
+    padding-bottom: 10vh;
+    color: #FFFFFF;
+    text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+  }
+  #homeSection .sec p {
+    width: 70%;
+    font-family: "Anek Telugu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.53px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+  }
+  #homeSection .sec .container {
+    padding-top: 5vh;
+    color: #e7e7e7;
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+  }
+  #homeSection .sec .container #headline {
+    font-family: "Anek Telugu";
+    font-weight: normal;
+    letter-spacing: 0.125rem;
+    font-size: 0.8rem;
+  }
+  #homeSection .sec .container li {
+    display: inline-block;
+    font-size: 1em;
+    list-style-type: none;
+    padding: 0% 1em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  #homeSection .sec .container li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+  #homeSection .sec .container .emoji {
+    display: none;
+    padding: 1rem;
+  }
+  #homeSection .sec .container .emoji span {
+    font-size: 4rem;
+    padding: 0 0.5rem;
+  }
+}
+@media only screen and (max-width: 1200px) and (max-width: 768px) {
+  #homeSection .sec .container h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  #homeSection .sec .container li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  #homeSection .sec .container li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #homeSection .land {
+    width: 100%;
+    height: 35vh;
+    max-height: 60vh !important;
+    max-width: 135% !important;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    z-index: 999;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homeSection .land #leftLand {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+  }
+  #homeSection .land #leftLand #leftTree {
+    left: 0%;
+  }
+  #homeSection .land #rightLand {
+    z-index: 999;
+    position: absolute;
+    right: 0%;
+    bottom: 0;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #homeSection .landSm {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .bigscreen {
+    display: none;
+  }
+  .bigscreen #homeSection #moon {
+    position: absolute;
+    height: 35vh;
+    width: auto;
+    top: -10%;
+    left: 5%;
+  }
+  .bigscreen #homeSection #tree {
+    position: fixed;
+    top: 23%;
+    right: -20%;
+    width: auto;
+    height: auto;
+    z-index: 5;
+  }
+  .bigscreen #homeSection #house {
+    z-index: 6;
+    position: fixed;
+    top: 35vh;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    transition: 2s ease-in-out;
+  }
+  .bigscreen #homeSection .sec {
+    position: relative;
+    background-color: rgba(8, 12, 44, 0);
+    height: 100vh !important;
+    min-height: -moz-max-content;
+    min-height: max-content;
+    background-position: cover;
+    background-size: 100%;
+    z-index: 100;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding-bottom: 15vh;
+    color: aliceblue;
+  }
+  .bigscreen #homeSection .sec h2 {
+    font-family: "HalbfetteSecession";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 106.71px;
+    line-height: 108px;
+    text-align: center;
+    padding-bottom: 10vh;
+    color: #FFFFFF;
+    text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+  }
+  .bigscreen #homeSection .sec p {
+    width: 70%;
+    font-family: "Anek Telugu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.53px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+  }
+  .bigscreen #homeSection .sec .container {
+    padding-top: 5vh;
+    color: #e7e7e7;
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+  }
+  .bigscreen #homeSection .sec .container #headline {
+    font-family: "Anek Telugu";
+    font-weight: normal;
+    letter-spacing: 0.125rem;
+    font-size: 0.8rem;
+  }
+  .bigscreen #homeSection .sec .container li {
+    display: inline-block;
+    font-size: 1em;
+    list-style-type: none;
+    padding: 0% 1em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .bigscreen #homeSection .sec .container li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+  .bigscreen #homeSection .sec .container .emoji {
+    display: none;
+    padding: 1rem;
+  }
+  .bigscreen #homeSection .sec .container .emoji span {
+    font-size: 4rem;
+    padding: 0 0.5rem;
+  }
+}
+@media only screen and (max-width: 600px) and (max-width: 768px) {
+  .bigscreen #homeSection .sec .container h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  .bigscreen #homeSection .sec .container li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  .bigscreen #homeSection .sec .container li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+@media only screen and (max-width: 600px) {
+  .bigscreen #homeSection .land {
+    width: 100%;
+    height: 35vh;
+    max-height: 60vh !important;
+    max-width: 135% !important;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    z-index: 999;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bigscreen #homeSection .land #leftLand {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+  }
+  .bigscreen #homeSection .land #leftLand #leftTree {
+    left: 0%;
+  }
+  .bigscreen #homeSection .land #rightLand {
+    z-index: 999;
+    position: absolute;
+    right: 0%;
+    bottom: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .bigscreen #homeSection .landlg {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .bigscreen #homeSection .land .sm {
+    display: inline;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 0%;
+    padding: 0%;
+    max-width: 100vw;
+    width: 100%;
+    min-height: -moz-max-content;
+    min-height: max-content;
+    font-family: "HalbfetteSecession";
+    height: -moz-max-content;
+    height: max-content;
+    position: relative;
+    background-size: 100%;
+    overflow-x: hidden;
+    background-image: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .smscreen {
+    display: inline-flex;
+    flex-wrap: wrap;
+    background-image: none;
+    position: relative;
+    height: -moz-max-content;
+    height: max-content;
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url("./../img/smallVersion/mainBg.png");
+    background-position: center;
+    background-size: cover;
+  }
+  .smscreen #preLoadingSm {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    opacity: 1;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    transition: 2s ease-in-out !important;
+  }
+  .smscreen #preLoadingSm img {
+    padding: 0%;
+    width: 100vw;
+    height: 100vh;
+  }
+  .smscreen #moonSm {
+    height: 247px;
+    width: auto;
+    position: fixed;
+    top: 0vh;
+    left: 0%;
+  }
+  .smscreen #houseSm {
+    position: absolute;
+    top: 50vh;
+    height: 362px;
+    width: 100%;
+  }
+  .smscreen #SmbottomLand {
+    position: fixed;
+    transition: 0.7s ease-in-out;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: 999;
+    opacity: 1;
+  }
+  .smscreen .sec {
+    position: relative;
+    background-color: rgba(8, 12, 44, 0);
+    height: -moz-max-content;
+    height: max-content;
+    min-height: -moz-max-content;
+    min-height: max-content;
+    background-position: cover;
+    background-size: 100%;
+    z-index: 99;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin-top: 75vh;
+    padding: 25vh 0%;
+    color: aliceblue;
+  }
+  .smscreen .sec h2 {
+    font-family: "HalbfetteSecession";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 108px;
+    text-align: center;
+    width: 100%;
+    color: #FFFFFF;
+    text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+  }
+  .smscreen .sec p {
+    width: 70%;
+    font-family: "Anek Telugu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.53px;
+    line-height: 1rem;
+    text-align: left;
+    color: #FFFFFF;
+    text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+  }
+  .smscreen .sec .container {
+    padding-top: 2vh;
+    color: #e7e7e7;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .smscreen .sec .container #headline {
+    width: 70%;
+    font-family: "Anek Telugu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.53px;
+    line-height: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 1.62712px 4.88136px rgba(0, 0, 0, 0.25);
+  }
+  .smscreen .sec .container li {
+    display: inline-block;
+    font-family: "Anek Telugu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7.56px;
+    line-height: 11px;
+    text-align: center;
+    color: #FFFFFF;
+    list-style-type: none;
+    padding: 0% 1em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .smscreen .sec .container li span {
+    display: block;
+    font-family: "Halbfette Secession";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30.8033px;
+    line-height: 62px;
+    text-align: center;
+  }
+  .smscreen .sec .container .emoji {
+    display: none;
+    padding: 1rem;
+  }
+  .smscreen .sec .container .emoji span {
+    font-size: 4rem;
+    padding: 0 0.5rem;
+  }
+  .smscreen #SmTopLand {
+    position: fixed;
+    transition: 0.7s ease-in-out;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: 999;
+    opacity: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
